@@ -18,11 +18,8 @@ async function getData(category: string) {
 
 export const dynamic = "force-dynamic";
 
-// Using a more specific type instead of any
 type CategoryPageProps = {
-  params: {
-    category: string;
-  };
+  params: { category: string }; // ✅ Ensure it's an object, not a Promise
   searchParams?: Record<string, string | string[] | undefined>;
 };
 
